@@ -2,15 +2,13 @@
 
 import { useState, useCallback, useEffect } from "react";
 import { useTranslations } from "next-intl";
-import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
-import { cn, formatPrice } from "@/utils";
 import { SectionHeader } from "@/components/shared/section-header";
 import { ProductCard } from "@/components/shared/product-card";
-import { useCartStore } from "@/store";
 import type { Product } from "@/types";
+
 
 const featuredProducts: Product[] = [
   {

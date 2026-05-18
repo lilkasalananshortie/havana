@@ -31,7 +31,7 @@ export function SectionHeader({ title, subtitle, align = "center", className }: 
           {subtitle}
         </p>
       )}
-      <div className="mt-4 flex items-center justify-center gap-2">
+      <div className={`mt-4 flex items-center gap-2 ${align === "start" ? "justify-start" : align === "end" ? "justify-end" : "justify-center"}`}>
         <div className="h-[1px] w-12 bg-gold/50" />
         <div className="h-2 w-2 rounded-full bg-gold" />
         <div className="h-[1px] w-12 bg-gold/50" />

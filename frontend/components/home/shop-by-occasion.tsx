@@ -2,7 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
-import { Sparkles, Heart, Cake, Wine, GraduationCap, Flower2, Star, Leaf } from "lucide-react";
+import { Sparkles, Heart, Cake, GraduationCap, Flower2, Star, Leaf } from "lucide-react";
 import { cn } from "@/utils/cn";
 import { SectionHeader } from "@/components/shared/section-header";
 import { StaggerContainer, StaggerItem } from "@/components/shared/stagger-container";
