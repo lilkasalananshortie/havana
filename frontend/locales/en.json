@@ -1,0 +1,135 @@
+{
+  "common": {
+    "addToCart": "Add to Cart",
+    "buyNow": "Buy Now",
+    "viewAll": "View All",
+    "search": "Search...",
+    "loading": "Loading...",
+    "currency": "QAR",
+    "freeDelivery": "Free delivery over QAR 500",
+    "newArrival": "New",
+    "bestSeller": "Best Seller",
+    "sale": "Sale",
+    "outOfStock": "Out of Stock",
+    "reviews": "reviews",
+    "verified": "Verified Purchase",
+    "inStock": "In Stock"
+  },
+  "nav": {
+    "home": "Home",
+    "shop": "Shop",
+    "categories": "Categories",
+    "occasions": "Occasions",
+    "blog": "Blog",
+    "about": "About",
+    "contact": "Contact",
+    "cart": "Cart",
+    "wishlist": "Wishlist",
+    "account": "Account",
+    "signIn": "Sign In",
+    "signUp": "Sign Up",
+    "orders": "My Orders",
+    "settings": "Settings"
+  },
+  "hero": {
+    "title": "Luxury Floral Artistry",
+    "subtitle": "Experience the finest flower arrangements crafted with passion and elegance for every special moment in Qatar.",
+    "cta1": "Shop Collection",
+    "cta2": "Custom Orders"
+  },
+  "occasions": {
+    "title": "Shop by Occasion",
+    "subtitle": "Find the perfect arrangement for every celebration",
+    "eid": "Eid",
+    "weddings": "Weddings",
+    "birthday": "Birthday",
+    "anniversary": "Anniversary",
+    "graduation": "Graduation",
+    "mothersDay": "Mother's Day",
+    "love": "Love & Romance",
+    "sympathy": "Sympathy"
+  },
+  "features": {
+    "title": "Why Choose Havana Flowers",
+    "subtitle": "We deliver excellence with every petal",
+    "sameDay": {
+      "title": "Same-Day Delivery",
+      "description": "Order before 2 PM and receive your flowers the very same day across Qatar."
+    },
+    "freshness": {
+      "title": "7-Day Freshness",
+      "description": "Our flowers stay fresh and vibrant for a minimum of 7 days guaranteed."
+    },
+    "premium": {
+      "title": "Premium Quality",
+      "description": "Hand-selected blooms sourced from the world's finest flower farms."
+    },
+    "support": {
+      "title": "24/7 Support",
+      "description": "Round-the-clock customer service for all your floral needs."
+    },
+    "personalized": {
+      "title": "Personalized Touch",
+      "description": "Custom arrangements tailored to your exact preferences and vision."
+    },
+    "eco": {
+      "title": "Eco-Conscious",
+      "description": "Sustainable packaging and eco-friendly practices at every step."
+    }
+  },
+  "featured": {
+    "title": "Featured Collection",
+    "subtitle": "Handpicked selections from our master florists"
+  },
+  "bestSellers": {
+    "title": "Best Sellers",
+    "subtitle": "Most loved arrangements by our customers"
+  },
+  "testimonials": {
+    "title": "What Our Customers Say",
+    "subtitle": "Real reviews from our valued customers"
+  },
+  "instagram": {
+    "title": "Follow Us on Instagram",
+    "subtitle": "@havanaflowers.qa"
+  },
+  "newsletter": {
+    "title": "Stay in Bloom",
+    "subtitle": "Subscribe to receive exclusive offers, new arrivals, and floral inspiration.",
+    "placeholder": "Enter your email address",
+    "subscribe": "Subscribe",
+    "privacy": "By subscribing, you agree to our Privacy Policy."
+  },
+  "footer": {
+    "about": "Havana Flowers is Qatar's premier luxury floral boutique, delivering exquisite arrangements crafted with passion and precision since 2018.",
+    "quickLinks": "Quick Links",
+    "customerService": "Customer Service",
+    "contactInfo": "Contact Info",
+    "faq": "FAQ",
+    "shipping": "Shipping Policy",
+    "returns": "Returns & Refunds",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "trackOrder": "Track Order",
+    "giftCards": "Gift Cards",
+    "corporate": "Corporate Orders",
+    "address": "The Pearl-Qatar, Porto Arabia, Doha, Qatar",
+    "phone": "+974 4444 5555",
+    "email": "hello@havanaflowers.qa",
+    "hours": "Sat-Thu: 9AM - 10PM",
+    "rights": "All rights reserved."
+  },
+  "cart": {
+    "title": "Your Cart",
+    "empty": "Your cart is empty",
+    "continueShopping": "Continue Shopping",
+    "subtotal": "Subtotal",
+    "deliveryFee": "Delivery Fee",
+    "total": "Total",
+    "checkout": "Proceed to Checkout",
+    "freeDeliveryNote": "Free delivery on orders over QAR 500",
+    "standardDelivery": "Standard Delivery",
+    "remove": "Remove",
+    "quantity": "Qty"
+  }
+}
