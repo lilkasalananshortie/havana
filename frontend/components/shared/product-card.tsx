@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import { Heart, ShoppingBag } from "lucide-react";
 import { cn, formatPrice } from "@/utils";
 import { BadgeSale } from "./badge-sale";
@@ -19,6 +20,7 @@ interface ProductCardProps {
 
 export function ProductCard({ product, index = 0, className }: ProductCardProps) {
   const [isHovered, setIsHovered] = useState(false);
+  const t = useTranslations("common");
   const addItem = useCartStore((s) => s.addItem);
   const toggleWishlist = useWishlistStore((s) => s.toggleItem);
   const isInWishlist = useWishlistStore((s) => s.isInWishlist(product.id));
@@ -59,13 +61,13 @@ export function ProductCard({ product, index = 0, className }: ProductCardProps)
         {/* New Badge */}
         {product.isNew && !hasDiscount && (
           <Badge variant="new" className="absolute top-3 left-3 z-10">
-            New
+            {t("newArrival")}
           </Badge>
         )}
         {/* Best Seller Badge */}
         {product.isBestSeller && !hasDiscount && !product.isNew && (
           <Badge variant="gold" className="absolute top-3 left-3 z-10">
-            Best Seller
+           {t("bestSeller")}
           </Badge>
         )}
         {/* Wishlist Button */}
@@ -93,7 +95,7 @@ export function ProductCard({ product, index = 0, className }: ProductCardProps)
             className="gap-2 bg-white text-foreground hover:bg-maroon hover:text-white shadow-xl dark:bg-dark-card dark:text-white dark:hover:bg-maroon"
           >
             <ShoppingBag className="h-4 w-4" />
-            Add to Cart
+             {t("addToCart")}
           </Button>
         </div>
       </div>

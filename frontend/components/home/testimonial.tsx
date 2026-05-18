@@ -1,6 +1,6 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { Quote, BadgeCheck } from "lucide-react";
 import { SectionHeader } from "@/components/shared/section-header";
 import { RatingStars } from "@/components/shared/rating-stars";
@@ -44,6 +44,7 @@ const testimonials = [
 
 export function Testimonials() {
   const t = useTranslations("testimonials");
+  const locale = useLocale();
 
   return (
     <section className="py-20 lg:py-28">
@@ -57,7 +58,7 @@ export function Testimonials() {
                 <Quote className="h-8 w-8 text-maroon/10 dark:text-gold/10 mb-4" />
                 {/* Review text */}
                 <p className="text-sm text-muted-foreground leading-relaxed mb-6">
-                  &ldquo;{item.review}&rdquo;
+                  &ldquo;{locale === "ar" ? item.reviewAr : item.review}&rdquo;
                 </p>
                 {/* Rating */}
                 <div className="flex items-center gap-2 mb-4">
@@ -68,12 +69,12 @@ export function Testimonials() {
                 <div className="flex items-center gap-3 pt-4 border-t border-border">
                   <img
                     src={item.avatar}
-                    alt={item.name}
+                    alt={locale === "ar" ? item.nameAr : item.name}
                     className="h-10 w-10 rounded-full object-cover"
                   />
                   <div>
                     <div className="flex items-center gap-1.5">
-                      <span className="text-sm font-semibold">{item.name}</span>
+                      <span className="text-sm font-semibold">{locale === "ar" ? item.nameAr : item.name}</span>
                       {item.verified && (
                         <BadgeCheck className="h-3.5 w-3.5 text-emerald-500" />
                       )}

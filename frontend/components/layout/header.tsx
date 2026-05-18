@@ -52,9 +52,9 @@ export function Header() {
       <header
         className={cn(
           "sticky top-0 z-50 w-full transition-all duration-300",
-          scrolled
-            ? "bg-glass-light dark:bg-glass-dark shadow-lg border-b border-border"
-            : "bg-background/80 dark:bg-dark-bg/80 backdrop-blur-md"
+                    scrolled
+            ? "bg-background dark:bg-dark-card shadow-lg border-b border-border"
+            : "bg-background dark:bg-dark-bg"
         )}
       >
         <div className="container mx-auto px-4 lg:px-8">

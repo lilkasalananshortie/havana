@@ -97,6 +97,8 @@
     "title": "Stay in Bloom",
     "subtitle": "Subscribe to receive exclusive offers, new arrivals, and floral inspiration.",
     "placeholder": "Enter your email address",
+     "exclusive": "Exclusive",
+    "thankYou": "Thank you for subscribing!",
     "subscribe": "Subscribe",
     "privacy": "By subscribing, you agree to our Privacy Policy."
   },

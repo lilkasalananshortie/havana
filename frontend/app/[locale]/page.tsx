@@ -8,12 +8,13 @@ import { Testimonials } from "@/components/home/testimonial";
 import { InstagramGallery } from "@/components/home/instagram-gallery";
 import { Newsletter } from "@/components/home/newsletter";
 
-export default function HomePage({
+export default async function HomePage({
   params,
 }: {
   params: Promise<{ locale: string }>;
 }) {
-  void params;
+  const { locale } = await params;
+  setRequestLocale(locale);
   return (
     <>
       <Hero />

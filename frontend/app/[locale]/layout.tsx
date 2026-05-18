@@ -1,3 +1,4 @@
+import "@/app/globals.css";
 import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
@@ -20,7 +21,6 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const isRTL = locale === "ar";
   return {
     title: "Havana Flowers | Luxury Floral Artistry in Qatar",
     description: "Qatar's premier luxury floral boutique. Exquisite flower arrangements for weddings, events, and every special occasion.",

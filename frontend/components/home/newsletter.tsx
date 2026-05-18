@@ -44,7 +44,7 @@ export function Newsletter() {
         >
           <div className="inline-flex items-center gap-2 mb-6">
             <Sparkles className="h-5 w-5 text-gold" />
-            <span className="text-sm font-medium text-gold uppercase tracking-wider">Exclusive</span>
+            <span className="text-sm font-medium text-gold uppercase tracking-wider">{t("exclusive")}</span>
           </div>
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
             {t("title")}
@@ -80,7 +80,7 @@ export function Newsletter() {
               animate={{ opacity: 1, y: 0 }}
               className="mt-4 text-sm text-gold"
             >
-              Thank you for subscribing!
+            {t("thankYou")}
             </motion.p>
           )}
 
