@@ -2,13 +2,8 @@
 
 import { useEffect } from "react";
 import { useRouter, usePathname } from "next/navigation";
-import { NextIntlClientProvider } from "next-intl";
 import { useAdminStore } from "@/store/admin-store";
 import { AdminSidebar } from "@/components/admin/sidebar";
-import en from "@/locales/en.json";
-import ar from "@/locales/ar.json";
-
-const messages = { en, ar };
 
 export default function AdminLayout({
   children,
@@ -18,7 +13,6 @@ export default function AdminLayout({
   const router = useRouter();
   const pathname = usePathname();
   const isAuthenticated = useAdminStore((s) => s.isAuthenticated);
-
   const locale = pathname.split("/")[1] || "en";
 
   useEffect(() => {
@@ -36,11 +30,9 @@ export default function AdminLayout({
   }
 
   return (
-    <NextIntlClientProvider locale={locale} messages={messages[locale as keyof typeof messages]}>
-      <div className="min-h-screen bg-[#F8F5F2] dark:bg-[#0B0B0B]">
-        <AdminSidebar />
-        <main className="lg:pl-64 p-6">{children}</main>
-      </div>
-    </NextIntlClientProvider>
+    <div className="min-h-screen bg-[#F8F5F2] dark:bg-[#0B0B0B]">
+      <AdminSidebar />
+      <main className="lg:pl-64 p-6">{children}</main>
+    </div>
   );
 }

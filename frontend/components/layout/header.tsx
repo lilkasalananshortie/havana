@@ -183,9 +183,11 @@ export function Header() {
               </Button>
 
               {/* User */}
-              <Button variant="ghost" size="icon" className="hidden sm:flex">
-                <User className="h-5 w-5" />
-              </Button>
+              <a href="/en/login" className="hidden sm:flex">
+                <Button variant="ghost" size="icon">
+                  <User className="h-5 w-5" />
+                </Button>
+              </a>
 
               {/* Cart */}
               <Button variant="ghost" size="icon" onClick={openCart} className="relative">

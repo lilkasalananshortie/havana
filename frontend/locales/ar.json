@@ -13,7 +13,8 @@
     "outOfStock": "نفذت الكمية",
     "reviews": "تقييمات",
     "verified": "شراء موثق",
-    "inStock": "متوفر"
+    "inStock": "متوفر",
+    "email": "البريد الإلكتروني"
   },
   "nav": {
     "home": "الرئيسية",
@@ -35,7 +36,9 @@
     "title": "فن الزهور الفاخر",
     "subtitle": "اكتشف أجمل تنسيقات الزهور المصنوعة بحب وأناقة لكل لحظة مميزة في قطر.",
     "cta1": "تسوق المجموعة",
-    "cta2": "طلبات مخصصة"
+    "cta2": "طلبات مخصصة",
+    "tagline": "بوتيك الزهور الفاخر الأول في قطر",
+    "scroll": "مرر للأسفل"
   },
   "occasions": {
     "title": "تسوق حسب المناسبة",
@@ -91,7 +94,8 @@
   },
   "instagram": {
     "title": "تابعنا على إنستغرام",
-    "subtitle": "@havanaflowers.qa"
+    "subtitle": "@havanaflowers.qa",
+    "alt": "هافانا فلاورز على إنستغرام"
   },
   "newsletter": {
     "title": "ابقَ على اطلاع",
@@ -133,5 +137,61 @@
     "standardDelivery": "التوصيل القياسي",
     "remove": "إزالة",
     "quantity": "الكمية"
+  },
+  "login": {
+    "title": "مرحباً بعودتك",
+    "subtitle": "سجّل الدخول إلى حسابك في هافانا فلاورز",
+    "description": "أدخل بياناتك للوصول إلى حسابك",
+    "email": "البريد الإلكتروني",
+    "emailPlaceholder": "أدخل بريدك الإلكتروني",
+    "password": "كلمة المرور",
+    "passwordPlaceholder": "أدخل كلمة المرور",
+    "forgotPassword": "نسيت كلمة المرور؟",
+    "signIn": "تسجيل الدخول",
+    "or": "أو",
+    "noAccount": "ليس لديك حساب؟",
+    "createAccount": "إنشاء حساب",
+    "backToHome": "العودة إلى الرئيسية"
+  },
+  "admin": {
+    "nav": {
+      "dashboard": "لوحة التحكم",
+      "orders": "الطلبات",
+      "products": "المنتجات",
+      "performance": "الأداء",
+      "reviews": "التقييمات",
+      "settings": "الإعدادات",
+      "backToStore": "العودة للمتجر",
+      "logout": "تسجيل الخروج"
+    },
+      "login": {
+  "title": "تسجيل الدخول",
+  "subtitle": "أدخل بياناتك للوصول إلى حسابك",
+  "emailPlaceholder": "أدخل عنوان بريدك الإلكتروني",
+  "password": "كلمة المرور",
+  "passwordPlaceholder": "أدخل كلمة المرور",
+  "signIn": "تسجيل الدخول",
+  "signUp": "إنشاء حساب",
+  "noAccount": "ليس لديك حساب؟",
+  "forgotPassword": "نسيت كلمة المرور؟",
+  "requiredFields": "يرجى ملء جميع الحقول"
+},
+    "dashboard": {
+      "title": "لوحة التحكم",
+      "subtitle": "نظرة عامة على أداء متجرك",
+      "totalRevenue": "إجمالي الإيرادات",
+      "totalOrders": "إجمالي الطلبات",
+      "activeOrders": "الطلبات النشطة",
+      "totalProducts": "المنتجات",
+      "avgRating": "متوسط التقييم",
+      "pendingReviews": "تقييمات معلقة",
+      "liveOrders": "الطلبات المباشرة",
+      "noPending": "لا توجد طلبات معلقة",
+      "alerts": "التنبيهات",
+      "noAlerts": "لا توجد تنبيهات حالياً",
+      "lowStock": "مخزون منخفض",
+      "pendingReview": "تقييم معلق",
+      "recentOrders": "أحدث الطلبات"
+    }
   }
 }

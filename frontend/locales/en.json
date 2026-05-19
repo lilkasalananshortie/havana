@@ -13,7 +13,8 @@
     "outOfStock": "Out of Stock",
     "reviews": "reviews",
     "verified": "Verified Purchase",
-    "inStock": "In Stock"
+    "inStock": "In Stock",
+    "email": "Email"
   },
   "nav": {
     "home": "Home",
@@ -35,7 +36,9 @@
     "title": "Luxury Floral Artistry",
     "subtitle": "Experience the finest flower arrangements crafted with passion and elegance for every special moment in Qatar.",
     "cta1": "Shop Collection",
-    "cta2": "Custom Orders"
+    "cta2": "Custom Orders",
+    "tagline": "Qatar's Premier Floral Boutique",
+    "scroll": "Scroll"
   },
   "occasions": {
     "title": "Shop by Occasion",
@@ -91,13 +94,14 @@
   },
   "instagram": {
     "title": "Follow Us on Instagram",
-    "subtitle": "@havanaflowers.qa"
+    "subtitle": "@havanaflowers.qa",
+    "alt": "Havana Flowers Instagram"
   },
   "newsletter": {
     "title": "Stay in Bloom",
     "subtitle": "Subscribe to receive exclusive offers, new arrivals, and floral inspiration.",
     "placeholder": "Enter your email address",
-     "exclusive": "Exclusive",
+    "exclusive": "Exclusive",
     "thankYou": "Thank you for subscribing!",
     "subscribe": "Subscribe",
     "privacy": "By subscribing, you agree to our Privacy Policy."
@@ -133,5 +137,69 @@
     "standardDelivery": "Standard Delivery",
     "remove": "Remove",
     "quantity": "Qty"
+  },
+  "login": {
+    "title": "Welcome Back",
+    "subtitle": "Sign in to your Havana Flowers account",
+    "description": "Enter your credentials to access your account",
+    "email": "Email",
+    "emailPlaceholder": "Enter your email address",
+    "password": "Password",
+    "passwordPlaceholder": "Enter your password",
+    "forgotPassword": "Forgot password?",
+    "signIn": "Sign In",
+    "or": "or",
+    "noAccount": "Don't have an account?",
+    "createAccount": "Create Account",
+    "backToHome": "Back to Home"
+  },
+  "admin": {
+    "nav": {
+      "dashboard": "Dashboard",
+      "orders": "Orders",
+      "products": "Products",
+      "performance": "Performance",
+      "reviews": "Reviews",
+      "settings": "Settings",
+      "backToStore": "Back to Store",
+      "logout": "Logout"
+    },
+      "login": {
+    "title": "Welcome Back",
+    "subtitle": "Sign in to your Havana Flowers account",
+    "description": "Enter your credentials to access your account",
+    "adminTitle": "Admin Access",
+    "email": "Email",
+    "emailPlaceholder": "Enter your email address",
+    "password": "Password",
+    "passwordPlaceholder": "Enter your password",
+    "forgotPassword": "Forgot password?",
+    "signIn": "Sign In",
+    "adminSignIn": "Enter Admin Panel",
+    "invalidCredentials": "Invalid credentials",
+    "or": "or",
+    "noAccount": "Don't have an account?",
+    "createAccount": "Create Account",
+    "backToHome": "Back to Home",
+    "userLogin": "Customer",
+    "adminLogin": "Admin"
+  },
+    "dashboard": {
+      "title": "Dashboard",
+      "subtitle": "Overview of your store performance",
+      "totalRevenue": "Total Revenue",
+      "totalOrders": "Total Orders",
+      "activeOrders": "Active Orders",
+      "totalProducts": "Products",
+      "avgRating": "Avg Rating",
+      "pendingReviews": "Pending Reviews",
+      "liveOrders": "Live Orders",
+      "noPending": "No pending orders",
+      "alerts": "Alerts",
+      "noAlerts": "No alerts right now",
+      "lowStock": "Low stock",
+      "pendingReview": "Pending review",
+      "recentOrders": "Recent Orders"
+    }
   }
 }
