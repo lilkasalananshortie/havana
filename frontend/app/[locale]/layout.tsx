@@ -1,46 +1,49 @@
-"use client";
-
-import { useEffect } from "react";
-import { useRouter, usePathname } from "next/navigation";
+import "@/app/globals.css";
+import { Inter, Playfair_Display, Cairo } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
-import { useAdminStore } from "@/store/admin-store";
-import { AdminSidebar } from "@/components/admin/sidebar";
-import en from "@/locales/en.json";
-import ar from "@/locales/ar.json";
+import { getLocale, getMessages } from "next-intl/server";
+import { ThemeProvider } from "@/providers/theme-provider";
+import { Header } from "@/components/layout/header";
+import { Footer } from "@/components/layout/footer";
+import { CartDrawer } from "@/components/layout/cart-drawer";
+import { MobileNav } from "@/components/layout/mobile-nav";
 
-const messages = { en, ar };
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+});
 
-export default function AdminLayout({
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair",
+});
+
+const cairo = Cairo({
+  subsets: ["arabic"],
+  variable: "--font-cairo",
+});
+
+export default async function LocaleLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const router = useRouter();
-  const pathname = usePathname();
-  const isAuthenticated = useAdminStore((s) => s.isAuthenticated);
-
-  const locale = pathname.split("/")[1] || "en";
-
-  useEffect(() => {
-    if (!isAuthenticated) {
-      router.push(`/${locale}/login`);
-    }
-  }, [isAuthenticated, router, locale]);
-
-  if (!isAuthenticated) {
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-[#F8F5F2] dark:bg-[#0B0B0B]">
-        <div className="w-8 h-8 border-2 border-[var(--color-maroon)] border-t-transparent rounded-full animate-spin" />
-      </div>
-    );
-  }
+  const locale = await getLocale();
+  const messages = await getMessages();
 
   return (
-    <NextIntlClientProvider locale={locale} messages={messages[locale as keyof typeof messages]}>
-      <div className="min-h-screen bg-[#F8F5F2] dark:bg-[#0B0B0B]">
-        <AdminSidebar />
-        <main className="lg:pl-64 p-6">{children}</main>
-      </div>
-    </NextIntlClientProvider>
+    <html lang={locale} suppressHydrationWarning>
+      <body className={`${inter.variable} ${playfair.variable} ${cairo.variable}`}>
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          <ThemeProvider>
+            <Header />
+            <CartDrawer />
+            <MobileNav />
+            <main>{children}</main>
+            <Footer />
+          </ThemeProvider>
+        </NextIntlClientProvider>
+      </body>
+    </html>
   );
 }

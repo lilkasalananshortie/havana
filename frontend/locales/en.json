@@ -151,7 +151,9 @@
     "or": "or",
     "noAccount": "Don't have an account?",
     "createAccount": "Create Account",
-    "backToHome": "Back to Home"
+    "backToHome": "Back to Home",
+    "requiredFields": "Please fill in all fields",
+    "signUp": "Create Account"
   },
   "admin": {
     "nav": {

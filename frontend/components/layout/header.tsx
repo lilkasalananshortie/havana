@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { motion, AnimatePresence } from "framer-motion";
 import { Search, ShoppingBag, Heart, User, Menu, X, ChevronDown, Truck } from "lucide-react";
 import { cn } from "@/utils/cn";
@@ -13,6 +13,7 @@ import { useUIStore, useCartStore, useWishlistStore } from "@/store";
 
 export function Header() {
   const t = useTranslations();
+  const locale = useLocale();
   const [scrolled, setScrolled] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const openMobileMenu = useUIStore((s) => s.openMobileMenu);
@@ -28,14 +29,14 @@ export function Header() {
   }, []);
 
   const occasions = [
-    { label: t("occasions.eid"), href: "#occasions" },
-    { label: t("occasions.weddings"), href: "#occasions" },
-    { label: t("occasions.birthday"), href: "#occasions" },
-    { label: t("occasions.anniversary"), href: "#occasions" },
-    { label: t("occasions.graduation"), href: "#occasions" },
-    { label: t("occasions.mothersDay"), href: "#occasions" },
-    { label: t("occasions.love"), href: "#occasions" },
-    { label: t("occasions.sympathy"), href: "#occasions" },
+    { label: t("occasions.eid"), href: `#occasions` },
+    { label: t("occasions.weddings"), href: `#occasions` },
+    { label: t("occasions.birthday"), href: `#occasions` },
+    { label: t("occasions.anniversary"), href: `#occasions` },
+    { label: t("occasions.graduation"), href: `#occasions` },
+    { label: t("occasions.mothersDay"), href: `#occasions` },
+    { label: t("occasions.love"), href: `#occasions` },
+    { label: t("occasions.sympathy"), href: `#occasions` },
   ];
 
   return (
@@ -52,7 +53,7 @@ export function Header() {
       <header
         className={cn(
           "sticky top-0 z-50 w-full transition-all duration-300",
-                    scrolled
+          scrolled
             ? "bg-background dark:bg-dark-card shadow-lg border-b border-border"
             : "bg-background dark:bg-dark-bg"
         )}
@@ -68,7 +69,7 @@ export function Header() {
             </button>
 
             {/* Logo */}
-            <a href="/" className="flex items-center gap-2">
+            <a href={`/${locale}`} className="flex items-center gap-2">
               <span className="text-2xl lg:text-3xl font-serif font-bold tracking-wider text-gold-gradient">
                 HAVANA
               </span>
@@ -80,17 +81,17 @@ export function Header() {
             {/* Desktop Nav */}
             <nav className="hidden lg:flex items-center gap-1">
               {[
-                { label: t("nav.home"), href: "/" },
-                { label: t("nav.shop"), href: "/shop" },
-                { label: t("nav.categories"), href: "/categories" },
+                { label: t("nav.home"), href: `/${locale}` },
+                { label: t("nav.shop"), href: `/${locale}/shop` },
+                { label: t("nav.categories"), href: `/${locale}/categories` },
                 {
                   label: t("nav.occasions"),
                   href: "#occasions",
                   hasDropdown: true,
                 },
-                { label: t("nav.blog"), href: "/blog" },
-                { label: t("nav.about"), href: "/about" },
-                { label: t("nav.contact"), href: "/contact" },
+                { label: t("nav.blog"), href: `/${locale}/blog` },
+                { label: t("nav.about"), href: `/${locale}/about` },
+                { label: t("nav.contact"), href: `/${locale}/contact` },
               ].map((item) =>
                 item.hasDropdown ? (
                   <div
@@ -182,11 +183,12 @@ export function Header() {
                 )}
               </Button>
 
-              {/* User */}
-              <a href="/en/login" className="hidden sm:flex">
-                <Button variant="ghost" size="icon">
-                  <User className="h-5 w-5" />
-                </Button>
+              {/* User — plain link, no button wrapper */}
+              <a
+                href={`/${locale}/login`}
+                className="hidden sm:flex items-center justify-center h-10 w-10 rounded-lg hover:bg-muted transition-colors"
+              >
+                <User className="h-5 w-5" />
               </a>
 
               {/* Cart */}
